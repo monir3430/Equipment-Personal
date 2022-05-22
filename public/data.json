@@ -4,7 +4,7 @@
     "price": 10,
     "available": 20000,
     "img": "https://i.ibb.co/TBrtKyR/axe.jpg",
-    "order-lot": 500,
+    "lot": 500,
     "description": "An axe is a hand tool with a sharp cutting edge on one side, and another side head is forged, used for felling or cutting trees, woods into pieces."
   },
   {
@@ -12,7 +12,7 @@
     "price": 5,
     "available": 40000,
     "img": "https://i.ibb.co/yBwjsmz/back-saw.jpg",
-    "order-lot": 1000,
+    "lot": 1000,
     "description": "The saw is a wooden and metal cutting tool made by a blade having teeth along one side. Carpenters and welders mostly use it."
   },
   {
@@ -20,7 +20,7 @@
     "price": 50,
     "available": 10000,
     "img": "https://i.ibb.co/Gxckq9n/drill.jpg",
-    "order-lot": 5,
+    "lot": 5,
     "description": "A drill is a mechanical tool used to make holes in a rough surface like wall, concrete, etc."
   },
   {
@@ -28,7 +28,7 @@
     "price": 3,
     "available": 100000,
     "img": "https://i.ibb.co/xm55SDM/hammer.jpg",
-    "order-lot": 5000,
+    "lot": 5000,
     "description": "A hammer is a tool consisting of hard, heavy metal, mainly of steelhead fixed with a handle of wood or any metal pipe. It is used for blacksmithing work or hammering nails, etc."
   },
   {
@@ -36,7 +36,7 @@
     "price": 1,
     "available": 300000,
     "img": "https://i.ibb.co/ZdjVxnb/hexagon-bolt.jpg",
-    "order-lot": 10000,
+    "lot": 10000,
     "description": "A bolt is a metal piece having threads on its outer surface and a head-like metal designed like a hexagonal structure used for tightening any metal structure, etc."
   },
   
@@ -45,7 +45,7 @@
     "price": 2,
     "available": 150000,
     "img": "https://i.ibb.co/HCkGTbm/pliers.jpg",
-    "order-lot": 600,
+    "lot": 600,
     "description": "Plier is a gripping tool with two hinged arms to behold by the jaws and is working to and fro motion."
   },
   {
@@ -53,7 +53,7 @@
     "price": 2,
     "available": 150000,
     "img": "https://i.ibb.co/T13vfZr/punch.jpg",
-    "order-lot": 600,
+    "lot": 600,
     "description": "A center punch is a small steel-tipped tool with a conical tip used to punch the wall by hammering on it."
   },
   {
@@ -61,7 +61,7 @@
     "price": 8,
     "available": 10000,
     "img": "https://i.ibb.co/tcnPjp3/shovel.jpg",
-    "order-lot": 200,
+    "lot": 200,
     "description": "A shovel is a thick flat metal plate with a sharp tip at one side used for digging purposes."
   },
   {
@@ -69,7 +69,7 @@
     "price": 3,
     "available": 250000,
     "img": "https://i.ibb.co/C5q8RXn/spanner.jpg",
-    "order-lot": 1000,
+    "lot": 1000,
     "description": "A spanner is a steel hand tool with a handle used for tightening or loosening the nuts and bolts with a specific shape."
   },
   {
@@ -77,7 +77,7 @@
     "price": 4,
     "available": 25000,
     "img": "https://i.ibb.co/fdYX6Nb/tape.jpg",
-    "order-lot": 100,
+    "lot": 100,
     "description": "A tape measure is a measuring tool used for measuring purposes that contains a metal strip printed a measure on it."
   },
   {
@@ -85,7 +85,7 @@
     "price": 2,
     "available": 50000,
     "img": "https://i.ibb.co/FgRBG6G/tester.jpg",
-    "order-lot": 300,
+    "lot": 300,
     "description": "A tester is an electrical device used to test the presence of phase on a live wire and, in certain cases, used as a mini-screwdriver."
   },
   {
@@ -93,20 +93,9 @@
     "price": 7,
     "available": 30000,
     "img": "https://i.ibb.co/5Tp7P7g/wrench.jpg",
-    "order-lot": 150,
+    "lot": 150,
     "description": "A wrench is a thick, mechanical tool specially used as a spanner with adjustable jaws."
   }
   
   
 ]
-
-
-
-
-
-
-
-
-
-
-
