@@ -9,7 +9,7 @@ import AddProduct from './Admin/AddProduct';
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <div><Navbar></Navbar></div>
      <Routes>
       <Route path='/home' element = {<Home></Home>}></Route>
       <Route path='/addProduct' element = {<AddProduct></AddProduct>}></Route>
