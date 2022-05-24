@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import EquipTool from './EquipTool';
+import Spinner from '../../Shared/Spinner';
 
 const Equipment = () => {
     const [tools, setTools] = useState([]);
@@ -8,6 +8,9 @@ const Equipment = () => {
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])
+    if(tools.length === 0){
+        return <Spinner></Spinner>
+    }
 
     const newTools = tools.slice(0, 6);
     return (
