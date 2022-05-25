@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from "../Shared/firebase.init"
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
+import Spinner from '../Shared/Spinner';
 
 const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -21,7 +22,7 @@ const Register = () => {
 
       
       if(loading || updating){
-        return <progress className="progress w-40"></progress>
+        return <Spinner></Spinner>
 
       }
 
@@ -31,17 +32,18 @@ const Register = () => {
        
         
       }
-    if (user) {
-        console.log(user)
-    }
+    // if (user) {
+    //     console.log(updateProfile)
+    // }
 
     
 
     const onSubmit = async data => {
         console.log(data);
+        
        await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name});
-        navigate('/appointment')
+        navigate('/home')
        
     };
     return (
@@ -50,7 +52,7 @@ const Register = () => {
            
             <div className="card w-96 bg-base-100 shadow-xl ">
                 <div className="card-body">
-                    <h2 className="text-center text-bold text-2xl">Sign Up</h2>
+                    <h2 className="text-center text-bold text-2xl text-blue-900">Register</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
@@ -108,7 +110,7 @@ const Register = () => {
                             <label className="label">
                                 {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
-
+                                
 
                             </label>
                             
@@ -120,12 +122,12 @@ const Register = () => {
                                 {loginErrorMessage}
                         
 
-                        <input className='btn w-full max-w-xs btn-accent text-white' type="submit" value ='Register' />
+                        <input className='btn w-full max-w-xs btn-primary text-white' type="submit" value ='Register' />
                         
                     </form>
                     <p className='flex justify-center'><small>Already have Account? <Link to = '/login' className='text-primary font-bold'>Login</Link></small></p>
                     
-
+                    {updateProfile}
                 </div>
             </div>
             

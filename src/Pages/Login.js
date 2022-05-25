@@ -49,7 +49,7 @@ const Login = () => {
            
             <div className="card w-96 bg-base-100 shadow-xl ">
                 <div className="card-body">
-                    <h2 className="text-center text-bold text-2xl">Login</h2>
+                    <h2 className="text-center text-bold text-2xl text-blue-900">Login</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
@@ -106,7 +106,7 @@ const Login = () => {
                         <input className='btn w-full max-w-xs btn-primary text-white ' type="submit" value ='Login'/>
                         
                     </form>
-                    <p className='flex justify-center'><small>No Account? <Link to = '/signup' className='text-blue-900 font-bold'>Register</Link></small></p>
+                    <p className='flex justify-center'><small>No Account? <Link to = '/register' className='text-blue-900 font-bold'>Register</Link></small></p>
 
                     <div className="divider">OR</div>
                     <button

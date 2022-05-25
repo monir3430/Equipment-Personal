@@ -50,7 +50,7 @@ const AddProduct = () => {
                     <input className='pl-2' type="number" name="lot" placeholder='Minimum order' /><br /><br />
                     <input className='pl-2' type="img" name="img" placeholder='Image URL' required autoComplete='off' /><br /><br />
                     <textarea className='pl-2' name="description" cols="21" rows="4" placeholder='Description'></textarea><br />
-                    <input type="submit" value="Add Tool" class="btn" />
+                    <input type="submit" value="Add Tool" className="btn" />
                     <ToastContainer />
                 </form>
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Spinner from '../../Shared/Spinner';
 
 const Equipment = () => {
@@ -30,7 +31,7 @@ const Equipment = () => {
                             <p><b>Stock:</b> {tool.available} pcs</p>
                             <p><b>Minimum Order:</b> {tool.lot} pcs</p>
                             <div className="card-actions">
-                                <button className="btn btn-primary">Purchase Now</button>
+                            <Link to={'/Purchase'}><button className='btn btn-primary'>Order Now</button></Link>
                             </div>
                         </div>
                         
