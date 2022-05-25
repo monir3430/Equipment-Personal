@@ -64,13 +64,13 @@ const Details = () => {
     }
     return (
         <div className='p-5'>
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
                     <img src={img} alt="" />
 
                 </figure>
-                <div class="card-body">
-                    <h2 class="card-title font-bold text-blue-900">Equipment: {name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title font-bold text-blue-900">Equipment: {name}</h2>
                     <p>{description}</p>
                     <p><b>Price:</b> ${price} per pcs</p>
                     <p><b>Stock:</b> {available} pcs</p>
@@ -80,27 +80,27 @@ const Details = () => {
                             background: 'Lightgrey',
                             
                             
-                        }} class="card-actions justify-center mt-5 p-5">
+                        }} className="card-actions justify-center mt-5 p-5">
 
                         <form  onSubmit={handleOrder} className='grid grid-cols-1 gap-2'>
 
-                        <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">User Name:</span>
-                          <input type="text" disabled name='name' value={user?.displayName} class="input input-bordered input-sm w-full max-w-xs" /> 
-                          <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">User Email:</span>
-                            <input type="email" disabled name='email' value={user?.email} class="input input-bordered input-sm w-full max-w-xs" />
-                            <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">Product's Name:</span>
-                            <input type="text" name='tool' value={name} class="input input-bordered input-sm w-full max-w-xs" />
-                            <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">Per Unit Price:</span>
-                            <input type="number" disabled name='price' value ={price}class="input input-bordered input-sm w-full max-w-xs" />
-                            <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">Stock:</span>
-                            <input type="number" disabled name='stock' value ={available}class="input input-bordered input-sm w-full max-w-xs" />
-                            <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">Order Quantities:</span>
-                            <input type="number" name='order'onChange={(e) => setOrder(e.target.value)} value={order || lot}  class="input input-bordered input-sm w-full max-w-xs" />
-                            <span class="label-text-alt font-bold text-[16px] text-blue-900 flex">Total Cost:</span>
-                            <input type="number" value={cost} class="input input-bordered input-sm w-full max-w-xs" />
+                        <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">User Name:</span>
+                          <input type="text" disabled name='name' value={user?.displayName} className="input input-bordered input-sm w-full max-w-xs" /> 
+                          <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">User Email:</span>
+                            <input type="email" disabled name='email' value={user?.email} className="input input-bordered input-sm w-full max-w-xs" />
+                            <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">Product's Name:</span>
+                            <input type="text" name='tool' value={name} className="input input-bordered input-sm w-full max-w-xs" />
+                            <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">Per Unit Price:</span>
+                            <input type="number" disabled name='price' value ={price}className="input input-bordered input-sm w-full max-w-xs" />
+                            <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">Stock:</span>
+                            <input type="number" disabled name='stock' value ={available}className="input input-bordered input-sm w-full max-w-xs" />
+                            <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">Order Quantities:</span>
+                            <input type="number" name='order'onChange={(e) => setOrder(e.target.value)} value={order || lot}  className="input input-bordered input-sm w-full max-w-xs" />
+                            <span className="label-text-alt font-bold text-[16px] text-blue-900 flex">Total Cost:</span>
+                            <input type="number" value={cost} className="input input-bordered input-sm w-full max-w-xs" />
                             <p> <b>NB:</b> Order can not be less than {lot} or more than {available}</p>
 
-                           <button  class="btn btn-primary mt-3 disable "  disabled = {order > available || order < lot}>Confirm Place Now</button>
+                           <button  className="btn btn-primary mt-3 disable "  disabled = {order > available || order < lot}>Confirm Place Now</button>
                            
                            <ToastContainer/>
                         </form>
