@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import {useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from "../Shared/firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import Spinner from '../Shared/Spinner';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/"
@@ -19,8 +20,6 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-      
-    
       if (user || gUser) {
             
         navigate(from,{replace: true});
@@ -37,9 +36,13 @@ const Login = () => {
         
       }
       
+      
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
+
+
+       
     };
 
    
@@ -107,6 +110,8 @@ const Login = () => {
                         
                     </form>
                     <p className='flex justify-center'><small>No Account? <Link to = '/register' className='text-blue-900 font-bold'>Register</Link></small></p>
+                    <p className='flex justify-center'><small>Forget Password? <Link to = '/resetform' className='text-blue-900 font-bold'>Reset Password</Link></small></p>
+                    
 
                     <div className="divider">OR</div>
                     <button
@@ -115,7 +120,6 @@ const Login = () => {
 
                         Login with Google
                     </button>
-                    
 
                 </div>
             </div>

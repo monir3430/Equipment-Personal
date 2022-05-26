@@ -19,6 +19,7 @@ import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageOrder from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ResetForm from './Auth/ResetForm';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Route path='/blogs' element = {<Blogs></Blogs>}></Route>
       <Route path='/detail/:id' element = {<Details></Details>}></Route>
       <Route path='/register' element = {<Register></Register>}></Route>
+      <Route path='/resetform' element = {<ResetForm></ResetForm>}></Route>
       <Route path='/purchase' element = {
       <RequiredAuth>
         <Purchase/>
