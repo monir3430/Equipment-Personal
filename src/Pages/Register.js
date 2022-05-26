@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from "../Shared/firebase.init"
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
+import { useForm } from "react-hook-form"
+import { Link, useNavigate } from 'react-router-dom';
 import Spinner from '../Shared/Spinner';
 
 const Register = () => {
@@ -16,7 +14,7 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -44,6 +42,8 @@ const Register = () => {
        await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name});
         navigate('/home')
+
+        
        
     };
     return (
