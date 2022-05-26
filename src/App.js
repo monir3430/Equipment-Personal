@@ -15,6 +15,10 @@ import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import NoFound from './Pages/NoFound';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageOrder from './Pages/Dashboard/ManageOrder';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 
 function App() {
@@ -27,6 +31,10 @@ function App() {
         <Route index element = {<MyOrders></MyOrders>}></Route>
         <Route path="addreview" element = {<AddReview></AddReview>}></Route>
         <Route path="myprofile" element = {<MyProfile></MyProfile>}></Route>
+        <Route path="manageorder" element = {<ManageOrder></ManageOrder>}></Route>
+        <Route path="manageproduct" element = {<ManageProduct></ManageProduct>}></Route>
+        <Route path="addproduct" element = {<AddProduct></AddProduct>}></Route>
+        <Route path="makeadmin" element = {<MakeAdmin></MakeAdmin>}></Route>
         
       
       </Route>
