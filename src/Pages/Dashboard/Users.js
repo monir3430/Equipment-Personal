@@ -1,12 +1,14 @@
 import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
-const Users = (user,refetch) => {
-    const { email, role} = user.user;
+const Users = (user) => {
+    console.log(user)
+    const { email, role, refetch} = user.user;
     
     
     const makeAdmin = () => {
-        const url = `http://localhost:5000/user/admin/${email}`;
+
+            const url = `http://localhost:5000/user/admin/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -20,12 +22,7 @@ const Users = (user,refetch) => {
                
             })
             toast.success("User is now an admin")
-            
-           
-            
-            
-
-            
+                 
 
 
     }

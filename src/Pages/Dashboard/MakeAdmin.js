@@ -9,6 +9,7 @@ const MakeAdmin = () => {
             res.json())
 
     )
+    
 
     if (isLoading) {
         return <Spinner></Spinner>

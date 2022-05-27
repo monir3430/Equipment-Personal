@@ -35,7 +35,7 @@ const MyOrders = () => {
     }, [])
 
     if (orders.length === 0) {
-        return <Spinner></Spinner>
+        return <p>No order</p>
     }
     return (
         <div className='p-3'>

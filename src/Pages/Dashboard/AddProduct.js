@@ -48,7 +48,7 @@ const AddProduct = () => {
                     <input className='pl-2' type="number" name="price" placeholder='price' required /><br /><br />
                     <input className='pl-2' type="number" name="available" placeholder='Available' required /><br /><br />
                     <input className='pl-2' type="number" name="lot" placeholder='Minimum order' /><br /><br />
-                    <input className='pl-2' type="img" name="img" placeholder='Image URL' required autoComplete='off' /><br /><br />
+                    <input className='pl-2' type="url   " name="img" placeholder='Image URL' required autoComplete='off' /><br /><br />
                     <textarea className='pl-2' name="description" cols="21" rows="4" placeholder='Description'></textarea><br />
                     <input type="submit" value="Add Tool" className="btn" />
                     <ToastContainer />
