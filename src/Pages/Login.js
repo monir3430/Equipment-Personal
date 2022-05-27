@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from "../Shared/firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Spinner from '../Shared/Spinner';
+import useToken from '../hooks/useToken';
 
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    
+
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/"
@@ -20,10 +21,18 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-      if (user || gUser) {
+      const [token] = useToken(user || gUser)
+
+      useEffect(()=>{
+          if(token){
+            navigate(from,{replace: true});
+          }
+      }, [token, from, navigate])
+
+    //   if (user || gUser) {
             
-        navigate(from,{replace: true});
-    }
+    //     navigate(from,{replace: true});
+    // }
       if(loading || gLoading){
         return <Spinner></Spinner>
 

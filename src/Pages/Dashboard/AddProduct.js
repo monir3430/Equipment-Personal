@@ -42,7 +42,7 @@ const AddProduct = () => {
                 width: '300px',
                 height: '470px',
             }} className='mb-10 mt-5 p-2 '>
-                <h3 className='text-xl font-bold text-blue-900 p-2'>Add Product Details</h3>
+                <h3 className='text-xl font-bold text-blue-900 p-2'>Add New Product</h3>
                 <form onSubmit={handleAddProduct}>
                     <input className='pl-2' type="text" name="name" placeholder='Tools Name' required autoComplete='off'/><br /><br />
                     <input className='pl-2' type="number" name="price" placeholder='price' required /><br /><br />

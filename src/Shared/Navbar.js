@@ -10,24 +10,24 @@ import Spinner from './Spinner';
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const handleSignOut = () => {
-        signOut(auth).then(() => { console.log("Out") })
+        signOut(auth)
+        localStorage.removeItem('accessToken');
     }
-    if (loading) {
-        return <Spinner></Spinner>
-    }
+    // if (loading) {
+    //     return <Spinner></Spinner>
+    // }
 
 
     const menuItems = <>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/purchase">Purchase</Link></li>
-        <li><Link to="/addproduct">AddP</Link></li>
         <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
 
         <li>{user ? <div>
             <button onClick={handleSignOut} className="btn btn-ghost">Logout</button>
-            <small>{user.displayName}</small>
+            <p className='text-blue-900 font-bold hidden lg:block'>{user?.displayName}</p>
         </div> : <div>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/register">Register</Link></li>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100 ">
+        <div className="navbar bg-base-100 font-bold ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">

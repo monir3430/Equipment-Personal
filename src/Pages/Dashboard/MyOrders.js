@@ -9,7 +9,6 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     console.log(orders)
 
-
     // By fetch---------------------------------
 
     // useEffect(()=>{
@@ -23,7 +22,6 @@ const MyOrders = () => {
 
     // }, [])
 
-
     //By Axios--------------------------------------------------
 
     useEffect(() => {
@@ -35,49 +33,47 @@ const MyOrders = () => {
             setOrders(getOrders);
         }
         MyOrders();
-
-
-
     }, [])
 
     if (orders.length === 0) {
         return <Spinner></Spinner>
     }
     return (
-        <div>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead >
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Order Quantities</th>
-                            <th>Price</th>
-                            <th>Total Cost</th>
-                            
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        <div className='p-3'>
+           <p className='text-2xl font-bold text-green-900 pb-1'>Total My Orders = {orders.length}</p>
+           <div class="overflow-x-auto">
+  <table class="table w-full">
+   
+    <thead>
+      <tr>
+        <th>SL</th>
+        <th>Product Name</th>
+        <th>Price/Unit</th>
+        <th>Total Cost</th>
+        <th>Status</th>
+        <th className='pl-10'>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+     {
+         orders.map((order, index)=> <tr key={index}>
+            <th>{index+1}</th>
+            <td>{order.productName}</td>
+            <td>{order.price}</td>
+            <td>{order.totalCost}</td>
+            <td><button class="btn btn-xs btn-outline btn-success normal-case">Unpaid</button></td>
+            <p className='inline '><td><button class="btn btn-xs btn-outline btn-success normal-case">Pay</button></td><td><button class="btn btn-xs btn-outline btn-error normal-case">Cancel</button></td></p>
+          </tr>)
+     }
+      
+    </tbody>
+  </table>
+</div>
 
-                    <div className='overflow-x-auto'>
-                        {orders.map(order => 
-                            
-                            <tr className="table w-full ">
-                                <th></th>
-                                <th>{order.productName}</th>
-                                <th>{order.newOrder}</th>
-                                <th>{order.price}</th>
-                                <th>{order.totalCost}</th>
-                                
-                            </tr>
-                       
-                    )}
-                    </div>
-            </div>
-            
+        </div>
 
-            );
+
+    );
 };
 
-            export default MyOrders;
+export default MyOrders;

@@ -4,6 +4,7 @@ import auth from "../Shared/firebase.init"
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from 'react-router-dom';
 import Spinner from '../Shared/Spinner';
+import useToken from '../hooks/useToken';
 
 const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -18,6 +19,7 @@ const Register = () => {
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+      const [token] = useToken(user)
       
       if(loading || updating){
         return <Spinner></Spinner>
@@ -34,6 +36,9 @@ const Register = () => {
     //     console.log(updateProfile)
     // }
 
+    if(token){
+        navigate('/home')
+    }
     
 
     const onSubmit = async data => {
@@ -41,7 +46,7 @@ const Register = () => {
         
        await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name});
-        navigate('/home')
+        // navigate('/home')
 
         
        

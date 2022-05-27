@@ -40,7 +40,7 @@ const ResetForm = () => {
                     <input name='email' type="email" ref={emailRef} placeholder="Enter Your Email" className="input input-bordered" />
                 </label>
                 
-                <input type="submit" onClick={passwordReset} value="Send Mail" className="btn mt-2" />
+                <input type="submit" onClick={passwordReset} value="Send Mail" className="btn btn-primary mt-2" />
                 <ToastContainer></ToastContainer>
                 </form>
                 
