@@ -8,7 +8,6 @@ const MyOrders = () => {
     const [user] = useAuthState(auth)
     const [orders, setOrders] = useState([]);
     console.log(orders)
-
     // By fetch---------------------------------
 
     // useEffect(()=>{
