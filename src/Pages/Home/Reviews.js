@@ -13,7 +13,7 @@ const Reviews = () => {
     
     return (
         <div className='mt-10'>
-            <h1 className='text-4xl font-bold text-blue-900'>We appreciate our business client's reviews------</h1>
+            <h1 className='text-3xl font-bold text-blue-900 p-5'>We appreciate our business client's reviews------</h1>
             <div className='grid gap-5 justify-center '>
                 {
                     reviews.map(review =>

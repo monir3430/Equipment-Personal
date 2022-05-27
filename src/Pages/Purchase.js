@@ -16,7 +16,7 @@ const Purchase = () => {
 
     return (
         <div>
-       
+       <h1 className='text-2xl text-blue-900 font-bold mt-2 mb-2 p-5'>Chose Your Products & Place Bulk Order </h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
             {tools.map(tool =>
                 <div key={tool._id} className="card w-96 bg-base-100 shadow-xl">

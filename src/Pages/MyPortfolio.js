@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyPortfolio = () => {
     return (
-        <div>
+        <div className='p-5'>
             <h1 className='text-2xl text-bold'>Name: Md: Monir Mia</h1>
             <h1 className='text-2xl text-bold'>Father: Md. Abdul Malek</h1>
             <h1 className='text-2xl text-bold'>Education: BBA & MBA at Finance & Banking</h1>

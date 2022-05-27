@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='p-5'>
             <h1 className='text-2xl font-bold text-blue-900'> How will you improve the performance of a React Application?</h1>
             <p>There are many techniques to improve performance. We will show the technique only.
                 <li>Using Immutable Data Structures</li>

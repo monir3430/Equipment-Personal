@@ -17,7 +17,7 @@ const Extra = () => {
             <div className='mt-7 p-5 place-content-center mx-auto '>
                 <h1 className='text-3xl font-bold text-blue-900'>Compliance Accreditation</h1>
                 <div className='p-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3'>
-                    <div className="card w-[500px] bg-base-100 shadow-xl border p-5">
+                    <div className="card w-[400px] bg-base-100 shadow-xl border p-5">
                         <img className='w-[120px] h-[120px]' src={leed} alt="" />
                         <div className="card-body">
                             <h2 className="card-title">LEED Silver certification.</h2>
@@ -25,7 +25,7 @@ const Extra = () => {
                             
                         </div>
                     </div>
-                    <div className="card w-[500px] bg-base-100 shadow-xl border p-5">
+                    <div className="card w-[400px] bg-base-100 shadow-xl border p-5">
                         <img className='w-[120px] h-[120px]' src={sedex} alt="" />
                         <div className="card-body">
                             <h2 className="card-title">SEDEX Certification.</h2>
