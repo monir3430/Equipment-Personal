@@ -20,6 +20,7 @@ import ManageOrder from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ResetForm from './Auth/ResetForm';
+import Payment from './Pages/Dashboard/Payment';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="manageproduct" element = {<ManageProduct></ManageProduct>}></Route>
         <Route path="addproduct" element = {<AddProduct></AddProduct>}></Route>
         <Route path="makeadmin" element = {<MakeAdmin></MakeAdmin>}></Route>
+        <Route path="payment/:id" element = {<Payment></Payment>}></Route>
         
       
       </Route>

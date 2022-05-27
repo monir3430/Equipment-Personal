@@ -3,28 +3,6 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const ManageProductTable = ({ tool, index, refetch, setToolDelete}) => {
 
-    // const dataDelete = (id)=>{
-    //     const deleteConfirmation = window.confirm('Are you sure to delete? ')
-    //     if(deleteConfirmation){
-    //         console.log("deleting id", id)
-    //         const url = `http://localhost:5000/tools/${id}`;
-    //         fetch(url, {
-    //             method: 'DELETE'
-    //         })
-    //         .then(res=>res.json())
-    //         .then(data=>{
-    //             if(data.deletedCount > 0){
-    //                 toast.success(`${tool.name} is successfully deleted. `);
-    //                 refetch();
-                    
-                    
-    //             }
-
-    //         })
-
-    //     }
-        
-    // }
     return (
         <tr key={tool._id}>
             <th>

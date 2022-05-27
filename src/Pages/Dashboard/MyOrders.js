@@ -3,11 +3,12 @@ import axios from 'axios';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Shared/firebase.init';
 import Spinner from '../../Shared/Spinner';
+import { Link } from 'react-router-dom';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth)
     const [orders, setOrders] = useState([]);
-    console.log(orders)
+  
     // By fetch---------------------------------
 
     // useEffect(()=>{
@@ -60,8 +61,10 @@ const MyOrders = () => {
             <td>{order.productName}</td>
             <td>{order.price}</td>
             <td>{order.totalCost}</td>
-            <td><button class="btn btn-xs btn-outline btn-success normal-case">Unpaid</button></td>
-            <p className='inline '><td><button class="btn btn-xs btn-outline btn-success normal-case">Pay</button></td><td><button class="btn btn-xs btn-outline btn-error normal-case">Cancel</button></td></p>
+            <td>{!order?.paid? <button class="btn btn-xs btn-outline btn-primary normal-case">Unpaid</button>:
+            <button class="btn btn-xs btn-outline btn-primary normal-case"><p className='mr-3'>paid</p> and <p className='ml-3'>ID: {order.transactionId
+                          }              </p></button>}</td>
+            <td>{!order?.paid && <Link to = {`/dashboard/payment/${order._id}`}><button class="btn btn-xs btn-outline btn-success normal-case">Make Payment</button> </Link>} </td>
           </tr>)
      }
       
