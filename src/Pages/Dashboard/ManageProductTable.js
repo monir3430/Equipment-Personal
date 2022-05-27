@@ -1,30 +1,30 @@
 import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
-const ManageProductTable = ({ tool, index, refetch}) => {
+const ManageProductTable = ({ tool, index, refetch, setToolDelete}) => {
 
-    const dataDelete = (id)=>{
-        const deleteConfirmation = window.confirm('Are you sure to delete? ')
-        if(deleteConfirmation){
-            console.log("deleting id", id)
-            const url = `http://localhost:5000/tools/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.deletedCount > 0){
-                    toast.success(`${tool.name} is successfully deleted. `);
-                    refetch();
+    // const dataDelete = (id)=>{
+    //     const deleteConfirmation = window.confirm('Are you sure to delete? ')
+    //     if(deleteConfirmation){
+    //         console.log("deleting id", id)
+    //         const url = `http://localhost:5000/tools/${id}`;
+    //         fetch(url, {
+    //             method: 'DELETE'
+    //         })
+    //         .then(res=>res.json())
+    //         .then(data=>{
+    //             if(data.deletedCount > 0){
+    //                 toast.success(`${tool.name} is successfully deleted. `);
+    //                 refetch();
                     
                     
-                }
+    //             }
 
-            })
+    //         })
 
-        }
+    //     }
         
-    }
+    // }
     return (
         <tr key={tool._id}>
             <th>
@@ -50,9 +50,11 @@ const ManageProductTable = ({ tool, index, refetch}) => {
             </td>
 
             <th>
-                <button onClick={()=> dataDelete(tool._id) } class="btn btn-ghost btn-xs normal-case">Delete</button>
+                
+                <label onClick={()=>setToolDelete(tool)} htmlFor="delete-confirm-modal" class="btn modal-button btn-outline btn-error">Delete</label>
             </th>
             <ToastContainer />
+            
         </tr>
     );
 };
