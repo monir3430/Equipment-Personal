@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from "../../Shared/firebase.init";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -119,6 +119,7 @@ const MyProfile = () => {
                 <input type="submit" value="Submit" className="btn btn-primary" />
 
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
