@@ -1,6 +1,6 @@
 # You need read the below article to know the website materials & activities.
 
-This site is manufacturing activity & receiving order as bulk for business client not personal client [Live Site](https://github.com/facebook/create-react-app).
+This site is manufacturing activity & receiving order as bulk for business client not personal client [Live Site](https://equipment-personal.web.app/).
 
 ## We have used React as front enf development.
 
