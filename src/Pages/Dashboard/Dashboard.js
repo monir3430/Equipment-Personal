@@ -35,8 +35,8 @@ const Dashboard = () => {
           {admin && <li><Link to="/dashboard/makeadmin">Make Admin</Link></li>}
 
           <div>
-            <div class="card bg-base-100 shadow-xl">
-              <div class="card-body">
+            <div className="card bg-base-100 shadow-xl">
+              <div className="card-body">
                 <DayPicker styles={{
                   caption: { 
                     color: 'blue',                    

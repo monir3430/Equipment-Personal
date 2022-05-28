@@ -15,7 +15,7 @@ const ManageOrderTable = ({order, index, refetch, setModalData}) => {
             {ship?<td>Shipped</td>: <td>Not Shipped</td>}
             {paid? <button className='btn btn-xs btn-outline btn-success'>Make Ship</button>:
             
-            <label className='btn btn-xs btn-outline btn-error' onClick={()=>setModalData(order)} for="manage-order-modal">Remove</label>}
+            <label className='btn btn-xs btn-outline btn-error' onClick={()=>setModalData(order)} htmlFor="manage-order-modal">Remove</label>}
            
         </tr>
     );

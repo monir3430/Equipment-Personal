@@ -26,13 +26,13 @@ const ManageOrderModal = ({modalData, setModalData, refetch}) => {
 
     return (
         <div>
-            <input type="checkbox" id="manage-order-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg text-red-700 ">Are You Sure To delete Order of product "{productName}"</h3>
-                    <div class="modal-action">
+            <input type="checkbox" id="manage-order-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg text-red-700 ">Are You Sure To delete Order of product "{productName}"</h3>
+                    <div className="modal-action">
                     <button onClick={()=>deleteOrderByAdmin(_id)} className='btn btn-xs btn-outline btn-error'>Remove</button>
-                        <label for="manage-order-modal" class="btn btn-xs btn-outline btn-success">Cancel</label>
+                        <label htmlFor="manage-order-modal" className="btn btn-xs btn-outline btn-success">Cancel</label>
                     </div>
                 </div>
             </div>

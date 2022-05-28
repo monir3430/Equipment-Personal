@@ -47,8 +47,8 @@ const MyOrders = () => {
     return (
         <div className='p-3'>
            <p className='text-2xl font-bold text-green-900 pb-1'>Total My Orders = {orders.length}</p>
-           <div class="overflow-x-auto">
-  <table class="table w-full">
+           <div className="overflow-x-auto">
+  <table className="table w-full">
    
     <thead>
       <tr>
@@ -69,13 +69,13 @@ const MyOrders = () => {
             <td>{order.productName}</td>
             <td>{order.price}</td>
             <td>{order.totalCost}</td>
-            <td>{!order?.paid? <button class="btn btn-xs btn-outline btn-primary normal-case">Unpaid</button>:
-            <button class="btn btn-xs btn-outline btn-primary normal-case"><p className='mr-3'>paid</p> </button>}</td>
-            <td>{order?.paid && <button class="btn btn-xs btn-outline btn-success normal-case">{order?.transactionId}</button>}</td>
-            {!order.paid && <label onClick={()=> setOrderDelete(order)} for="order-delete-modal" class="btn btn-xs mt-4 btn-outline btn-error normal-case">Remove Order</label>}
+            <td>{!order?.paid? <button className="btn btn-xs btn-outline btn-primary normal-case">Unpaid</button>:
+            <button className="btn btn-xs btn-outline btn-primary normal-case"><p className='mr-3'>paid</p> </button>}</td>
+            <td>{order?.paid && <button className="btn btn-xs btn-outline btn-success normal-case">{order?.transactionId}</button>}</td>
+            {!order.paid && <label onClick={()=> setOrderDelete(order)} htmlFor="order-delete-modal" className="btn btn-xs mt-4 btn-outline btn-error normal-case">Remove Order</label>}
             
-            {/* <td>{!order?.paid && <button onClick={()=>deleteMyOrder(order._id)} class="btn btn-xs btn-outline btn-error normal-case">Remove</button>}</td> */}
-            <td>{!order?.paid && <Link to = {`/dashboard/payment/${order._id}`}><button class="btn btn-xs btn-outline btn-success normal-case">Make Payment</button> </Link>} </td>
+            {/* <td>{!order?.paid && <button onClick={()=>deleteMyOrder(order._id)} className="btn btn-xs btn-outline btn-error normal-case">Remove</button>}</td> */}
+            <td>{!order?.paid && <Link to = {`/dashboard/payment/${order._id}`}><button className="btn btn-xs btn-outline btn-success normal-case">Make Payment</button> </Link>} </td>
           </tr>)
 
 

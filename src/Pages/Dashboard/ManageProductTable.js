@@ -9,14 +9,14 @@ const ManageProductTable = ({ tool, index, refetch, setToolDelete}) => {
                 {index + 1}
             </th>
             <td>
-                <div class="flex items-center space-x-3">
-                    <div class="avatar">
-                        <div class="mask mask-squircle w-12 h-12">
+                <div className="flex items-center space-x-3">
+                    <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
                             <img src={tool.img} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
                     <div>
-                        <div class="font-bold">{tool.name}</div>
+                        <div className="font-bold">{tool.name}</div>
 
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const ManageProductTable = ({ tool, index, refetch, setToolDelete}) => {
 
             <th>
                 
-                <label onClick={()=>setToolDelete(tool)} htmlFor="delete-confirm-modal" class="btn modal-button btn-outline btn-error">Delete</label>
+                <label onClick={()=>setToolDelete(tool)} htmlFor="delete-confirm-modal" className="btn modal-button btn-outline btn-error">Delete</label>
             </th>
             <ToastContainer />
             

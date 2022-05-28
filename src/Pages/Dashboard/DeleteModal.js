@@ -30,13 +30,13 @@ const DeleteModal = ({toolDelete, refetch, setToolDelete}) => {
 
             
 
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="text-lg text-red-700">Are You sure to delete<span className='text-blue-900 text-2xl font-bold'> product  '{name}'?</span></h3>
-                    <div class="modal-action">
-                    <button onClick={()=> dataDelete(_id) } htmlFor="delete-confirm-modal" class="btn btn-error btn-xs btn-outline normal-case">Delete</button>
-                        <label for="delete-confirm-modal" class="btn btn-xs btn-outline btn-primary">Cancel</label>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="text-lg text-red-700">Are You sure to delete<span className='text-blue-900 text-2xl font-bold'> product  '{name}'?</span></h3>
+                    <div className="modal-action">
+                    <button onClick={()=> dataDelete(_id) } htmlFor="delete-confirm-modal" className="btn btn-error btn-xs btn-outline normal-case">Delete</button>
+                        <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-outline btn-primary">Cancel</label>
                     </div>
                 </div>
             </div>
