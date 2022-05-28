@@ -18,7 +18,7 @@ const AddProduct = () => {
 
         // Post data to server-------------------------
 
-        fetch('http://localhost:5000/tools', {
+        fetch('https://blooming-plateau-55758.herokuapp.com/tools', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

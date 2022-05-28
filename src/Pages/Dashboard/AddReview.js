@@ -13,7 +13,7 @@ const AddReview = () => {
         console.log(name, text, rating)
         const reviews = { name, text, rating }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://blooming-plateau-55758.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

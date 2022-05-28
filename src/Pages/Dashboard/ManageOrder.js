@@ -6,7 +6,7 @@ import ManageOrderTable from './ManageOrderTable';
 
 const ManageOrder = () => {
   const [modalData, setModalData] = useState(null);
-    const {data: orders, isLoading, error, refetch} = useQuery('orders', ()=> fetch("http://localhost:5000/orders")
+    const {data: orders, isLoading, error, refetch} = useQuery('orders', ()=> fetch("https://blooming-plateau-55758.herokuapp.com/orders")
         .then(res=>res.json())
     )
     if(isLoading){

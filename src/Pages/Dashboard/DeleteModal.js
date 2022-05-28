@@ -6,7 +6,7 @@ const DeleteModal = ({toolDelete, refetch, setToolDelete}) => {
 
     const dataDelete = (id)=>{
        
-            const url = `http://localhost:5000/tools/${id}`;
+            const url = `https://blooming-plateau-55758.herokuapp.com/tools/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -8,7 +8,7 @@ const ManageProduct = () => {
     const [toolDelete, setToolDelete] = useState(null);
 
     const { isLoading, error, data, refetch } = useQuery('tools', () =>
-        fetch('http://localhost:5000/tools').then(res =>
+        fetch('https://blooming-plateau-55758.herokuapp.com/tools').then(res =>
             res.json())
 
     )

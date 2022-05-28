@@ -15,7 +15,7 @@ const CheckoutForm = ({ data }) => {
     const {id} = useParams();
     useEffect(() => {
         
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://blooming-plateau-55758.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ data }) => {
                 data: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/orders/${_id}`, {
+            fetch(`https://blooming-plateau-55758.herokuapp.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'

@@ -13,7 +13,7 @@ const Details = () => {
     const [cost, setCost] = useState()
     const [error, setError]= useState('')
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://blooming-plateau-55758.herokuapp.com/tools/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setToolDetails(data));
@@ -41,7 +41,7 @@ const Details = () => {
         const orders = { userName, email, productName, price,  newOrder,  totalCost}
 
         // order send to database---------------------------
-        fetch('http://localhost:5000/orders', {
+        fetch('https://blooming-plateau-55758.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const Users = ({user, refetch, index}) => {
     
     const makeAdmin = () => {
 
-            const url = `http://localhost:5000/user/admin/${email}`;
+            const url = `https://blooming-plateau-55758.herokuapp.com/user/admin/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -27,7 +27,7 @@ const Users = ({user, refetch, index}) => {
     //Delete user-------------------------------------
     const userDelete = (id)=>{
             console.log("deleting id", id)
-            const url = `http://localhost:5000/users/${id}`;
+            const url = `https://blooming-plateau-55758.herokuapp.com/users/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

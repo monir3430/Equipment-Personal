@@ -6,7 +6,7 @@ const ManageOrderModal = ({modalData, setModalData, refetch}) => {
  
  const deleteOrderByAdmin = (id)=>{
        
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://blooming-plateau-55758.herokuapp.com/orders/${id}`;
     fetch(url, {
         method: 'DELETE'
     })

@@ -5,7 +5,7 @@ import Spinner from '../../Shared/Spinner';
 const Equipment = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://blooming-plateau-55758.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])

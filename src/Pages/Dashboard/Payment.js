@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L47EGLNmhiWBNqV10gMo96Y2UoW5QcCrDwBv
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://blooming-plateau-55758.herokuapp.com/orders/${id}`;
     const { data, isLoading, error } = useQuery(['orders', id], () => fetch(url).then(res => res.json()));
 
     if (isLoading) {

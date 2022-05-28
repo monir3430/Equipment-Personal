@@ -7,7 +7,7 @@ const OrderDeleteModal = ({orderDelete, setOrderDelete, orders, setOrders}) => {
     // data delete by id from my orders---------------------------------
     const deleteMyOrder = (id)=>{
        
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://blooming-plateau-55758.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

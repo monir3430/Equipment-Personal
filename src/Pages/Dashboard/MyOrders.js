@@ -14,7 +14,7 @@ const MyOrders = () => {
 
     // useEffect(()=>{
     //     const email = user.email;
-    //     fetch(`http://localhost:5000/orders?email=${email}`)
+    //     fetch(`https://blooming-plateau-55758.herokuapp.com/orders?email=${email}`)
     //     .then(res=>res.json())
     //     .then(data=>{
     //         const getOrders= data.filter(order=>order.email === email);
@@ -30,7 +30,7 @@ const MyOrders = () => {
       // order Load by email id for specific user---------------------------------
         const MyOrders = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/orders?email=${email}`;
+            const url = `https://blooming-plateau-55758.herokuapp.com/orders?email=${email}`;
             const { data } = await axios.get(url)
             const getOrders = data.filter(order => order.email === email);
             setOrders(getOrders);

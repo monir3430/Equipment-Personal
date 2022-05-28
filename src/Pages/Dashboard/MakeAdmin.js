@@ -5,7 +5,7 @@ import Users from './Users';
 
 const MakeAdmin = () => {
     const { isLoading, error, data, refetch} = useQuery('tools', () =>
-        fetch('http://localhost:5000/users').then(res =>
+        fetch('https://blooming-plateau-55758.herokuapp.com/users').then(res =>
             res.json())
 
     )

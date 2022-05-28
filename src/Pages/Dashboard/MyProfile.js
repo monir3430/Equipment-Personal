@@ -21,7 +21,7 @@ const MyProfile = () => {
 
 
 
-        // fetch('http://localhost:5000/profile', {
+        // fetch('https://blooming-plateau-55758.herokuapp.com/profile', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
@@ -37,7 +37,7 @@ const MyProfile = () => {
         //     })
 
 
-        const url = `http://localhost:5000/profile/${email}`;
+        const url = `https://blooming-plateau-55758.herokuapp.com/profile/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
