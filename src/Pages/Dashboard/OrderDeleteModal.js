@@ -19,16 +19,11 @@ const OrderDeleteModal = ({orderDelete, setOrderDelete, orders, setOrders}) => {
                    console.log(remainingOrders);
                    setOrders(remainingOrders);
                    setOrderDelete(null);
-                
-                    
                     
                 }
-  
             })
   
         }
-        
-    
     return (
         <div>
             <input type="checkbox" id="order-delete-modal" class="modal-toggle" />
